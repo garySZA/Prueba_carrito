@@ -1,9 +1,52 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './styles.css';
 
-function ContenidoCarrito(props){
-    return(
-        <div className= "ContenedorGeneral">
+class ContenidoCarrito extends Component
+{
+
+    constructor(props){
+        super(props);
+    
+        this.state = {
+          contador: 0,
+          mensaje: ""
+        };
+      }
+    
+      cant = 10;
+      msj = "No existen mas elementos disponibles";
+      msj2 = "Carrito Vacio";
+      msjVacio = "";
+    
+      aumentar = ()=>{
+        if(this.state.contador < this.cant){
+          this.setState({contador:this.state.contador+1});
+        }else{
+          this.setState({mensaje: this.msj});
+        }
+    
+        if(this.state.mensaje === this.msj2){
+          this.setState({mensaje: this.msjVacio});
+        }
+    
+      }
+    
+      quitarElementos = ()=>{
+        if(this.state.contador>0){
+          this.setState({contador:this.state.contador-1});
+        }else{
+          this.setState({mensaje: this.msj2})
+        }
+    
+        if(this.state.mensaje === this.msj){
+          this.setState({mensaje: this.msjVacio})
+        }
+      }
+      
+      render() {
+        return (
+         
+            <div className= "ContenedorGeneral">
             <div className="contenedorIcono">
             <div className="boton-volverAtras">
                 <a href="https://www.google.com" target="blank"><i className="fas fa-angle-left"></i></a>
@@ -47,10 +90,10 @@ function ContenidoCarrito(props){
                 <div className="contenido-detalles">
                     <div className="aumentar-cantidad">
                         <div className="contenedorNumeros"> 
-                            <p>Cantidad1</p>
+                        <p>{this.state.contador}</p>
                         </div>
                         <div className="contenedorBotonesCantidad">
-                            <button className="botonDisminuir"> <i class="fas fa-minus-circle"></i> </button>
+                            <button onClick={ this.quitarElementos} className="botonDisminuir"> <i class="fas fa-minus-circle"></i> </button>
                             <button className="botonAumentar"> <i class="fas fa-plus-circle"></i> </button> 
                         </div>
                     </div>
@@ -76,7 +119,10 @@ function ContenidoCarrito(props){
     </div>
             </div>
         </div>
-    );
+        );
+      }
+
+
 }
 
 export default ContenidoCarrito;
