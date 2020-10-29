@@ -8,7 +8,7 @@ class ContenidoCarrito extends Component
         super(props);
     
         this.state = {
-          contador: 0,
+          contador: 1,
           mensaje: ""
         };
       }
@@ -94,7 +94,7 @@ class ContenidoCarrito extends Component
                         </div>
                         <div className="contenedorBotonesCantidad">
                             <button onClick={ this.quitarElementos} className="botonDisminuir"> <i class="fas fa-minus-circle"></i> </button>
-                            <button className="botonAumentar"> <i class="fas fa-plus-circle"></i> </button> 
+                            <button onClick={ this.aumentar } className="botonAumentar"> <i class="fas fa-plus-circle"></i> </button> 
                         </div>
                     </div>
                 </div>
