@@ -117,20 +117,61 @@ body::-webkit-scrollbar-thumb {
 
 .boton-aceptar {
     color: white;
-    background-color: turquoise;
-    
-}
-
-.boton-cancelar {
-    background-color: crimson;
+    background-color: #BAC94A;
+    opacity: 0.6;
 }
 
 .boton-vaciar {
     background-color: #f4841a;
+    opacity: 0.6;
 }
 
 .btn:hover{
     width: 280px;
+    opacity: 1;
+}
+
+
+.boton-volverAtras {
+    font-size: 35px;
+    text-align: left;
+    margin: 15px;
+
+}
+.boton-volverAtras > a  {
+    color: silver;
+    transition: 0.5s;
+
+}
+.boton-volverAtras > a:hover {
+    font-size: 45px;
+}
+
+.aumentar-cantidad {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.contenedorBotonesCantidad {
+    margin-top: 5px;
+    padding-top: 15px;
+    margin-left: 10px;
+}
+.botonAumentar, .botonDisminuir {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.botonAumentar:hover, .botonDisminuir:hover{
+    opacity: 1;
+}
+
+.botonDisminuir > i  {
+    color:  #FF0033;
+}
+.botonAumentar > i {
+    color: rgba(0, 255, 255, 0.6);
 }
 
 /*amafñafa*/

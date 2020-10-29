@@ -3,7 +3,12 @@ import './styles.css';
 
 function ContenidoCarrito(props){
     return(
-        <div className="container">
+        <div className= "ContenedorGeneral">
+            <div className="contenedorIcono">
+            <div className="boton-volverAtras">
+                <a href="https://www.google.com" target="blank"><i className="fas fa-angle-left"></i></a>
+            </div>
+            <div className="container">
         <div className="container-title">
             <h2 className="title">Tu Carrito de Compras</h2>
             <div className="icon">
@@ -40,7 +45,15 @@ function ContenidoCarrito(props){
                     <h3 className="columna">Cantidad</h3>
                 </div>
                 <div className="contenido-detalles">
-                    <p>Cantidad1</p>
+                    <div className="aumentar-cantidad">
+                        <div className="contenedorNumeros"> 
+                            <p>Cantidad1</p>
+                        </div>
+                        <div className="contenedorBotonesCantidad">
+                            <button className="botonDisminuir"> <i class="fas fa-minus-circle"></i> </button>
+                            <button className="botonAumentar"> <i class="fas fa-plus-circle"></i> </button> 
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="container-detalles">
@@ -56,14 +69,13 @@ function ContenidoCarrito(props){
             <div className="boton-aceptar btn">
                 <a href="#">Aceptar</a>
             </div>
-            <div className="boton-cancelar btn">
-                <a href="#">Cancelar</a>
-            </div>
             <div className="boton-vaciar btn">
                 <a href="#">Vaciar Carrito</a>
             </div>
         </div>
     </div>
+            </div>
+        </div>
     );
 }
 
