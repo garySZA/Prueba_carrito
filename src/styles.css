@@ -59,6 +59,7 @@ body::-webkit-scrollbar-thumb {
     border: 5px solid silver;
     border-radius: 15px;
     box-shadow: 5px 5px 5px black;
+    margin-bottom: 10px;
 }
 
 .columna {
@@ -117,20 +118,68 @@ body::-webkit-scrollbar-thumb {
 
 .boton-aceptar {
     color: white;
-    background-color: turquoise;
-    
-}
-
-.boton-cancelar {
-    background-color: crimson;
+    background-color: #BAC94A;
+    opacity: 0.6;
 }
 
 .boton-vaciar {
     background-color: #f4841a;
+    opacity: 0.6;
 }
 
 .btn:hover{
     width: 280px;
+    opacity: 1;
 }
 
-/*asdasdasd*/
+
+.boton-volverAtras {
+    font-size: 35px;
+    text-align: left;
+    margin: 15px;
+
+}
+.boton-volverAtras > a  {
+    color: silver;
+    transition: 0.5s;
+
+}
+.boton-volverAtras > a:hover {
+    font-size: 45px;
+}
+
+.aumentar-cantidad {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.contenedorBotonesCantidad {
+    margin-top: 5px;
+    padding-top: 15px;
+    margin-left: 10px;
+}
+.botonAumentar, .botonDisminuir, .botonEliminar {
+    opacity: 0.6;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.botonAumentar:hover, .botonDisminuir:hover, .botonEliminar:hover{
+    opacity: 1;
+}
+
+.botonDisminuir > :last-child  {
+    color:  #FF0033;
+}
+.botonAumentar > :last-child {
+    color: rgba(0, 110, 255, 0.6);
+}
+
+.botonEliminar{
+    color: rgb(195, 0, 255);
+}
+
+.contenedorNumeros{
+    margin-top: 2px;
+}
