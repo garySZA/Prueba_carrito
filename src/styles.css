@@ -59,6 +59,7 @@ body::-webkit-scrollbar-thumb {
     border: 5px solid silver;
     border-radius: 15px;
     box-shadow: 5px 5px 5px black;
+    margin-bottom: 10px;
 }
 
 .columna {
@@ -158,23 +159,27 @@ body::-webkit-scrollbar-thumb {
     padding-top: 15px;
     margin-left: 10px;
 }
-.botonAumentar, .botonDisminuir {
+.botonAumentar, .botonDisminuir, .botonEliminar {
     opacity: 0.6;
     cursor: pointer;
+    font-size: 20px;
 }
 
-.botonAumentar:hover, .botonDisminuir:hover{
+.botonAumentar:hover, .botonDisminuir:hover, .botonEliminar:hover{
     opacity: 1;
 }
 
-.botonDisminuir > i  {
+.botonDisminuir > :last-child  {
     color:  #FF0033;
 }
-.botonAumentar > i {
-    color: rgba(0, 255, 255, 0.6);
+.botonAumentar > :last-child {
+    color: rgba(0, 110, 255, 0.6);
 }
 
-/*amafñafa*/
-/*asdasdasd*/
-/*holaaaaaaaaaaaaaaaaaaaaa*/
-/*  hi */
+.botonEliminar{
+    color: rgb(195, 0, 255);
+}
+
+.contenedorNumeros{
+    margin-top: 2px;
+}

@@ -1,0 +1,22 @@
+{
+    "productos":[{
+        "producto": "carne",
+        "precio": 25,
+        "descuento":0.5,
+        "cantidad": 1
+        },
+    {
+        "producto": "piernas de pollo",
+        "precio": 25,
+        "descuento":0.5,
+        "cantidad": 1
+            },
+    {
+        "producto": "piernas de pollo",
+        "precio": 25,
+        "descuento":0.5,
+        "cantidad": 1
+    }
+    
+    ]
+}
